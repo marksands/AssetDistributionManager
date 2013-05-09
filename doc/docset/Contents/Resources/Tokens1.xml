@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ADMBundle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ADMBundle</TokenIdentifier>
+			<Abstract type="html">The ADMBundle class is a proxy class that treats content directories as NSBundles.</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMBundle/setRepo:</TokenIdentifier>
+			<Abstract type="html">The repository of content bundles</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) ADMRepo *repo</Declaration>
+			
+			
+			<Anchor>//api/name/repo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMBundle/repo</TokenIdentifier>
+			<Abstract type="html">The repository of content bundles</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) ADMRepo *repo</Declaration>
+			
+			
+			<Anchor>//api/name/repo</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMBundle/setBundleId:</TokenIdentifier>
+			<Abstract type="html">The name of the content bundle</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSString *bundleId</Declaration>
+			
+			
+			<Anchor>//api/name/bundleId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMBundle/bundleId</TokenIdentifier>
+			<Abstract type="html">The name of the content bundle</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSString *bundleId</Declaration>
+			
+			
+			<Anchor>//api/name/bundleId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ADMBundle/bundleWithDescriptor:error:</TokenIdentifier>
+			<Abstract type="html">Returns a ADMBundle object initialized to correspond to the specified bundle path.</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>+ (id)bundleWithDescriptor:(NSString *)descriptor error:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>descriptor</Name>
+					<Abstract type="html">The combined ids of the repository id and bundle id in the form of repo.bundle.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object returned in case of failure.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The NSBundle object that corresponds to bundle path, or nil if the bundle does not identify an accessible bundle directory.</Abstract></ReturnValue>
+			<Anchor>//api/name/bundleWithDescriptor:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ADMBundle/bundleWithRepoId:bundleId:error:</TokenIdentifier>
+			<Abstract type="html">Returns a ADMBundle object initialized to correspond to the specified bundle path.</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>+ (id)bundleWithRepoId:(NSString *)repositoryId bundleId:(NSString *)bundleId error:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>repositoryId</Name>
+					<Abstract type="html">The name of the repository that points to the bundle directory&apos;s parent directory.</Abstract>
+				</Parameter><Parameter>
+					<Name>bundleId</Name>
+					<Abstract type="html">The name of the bundle that corresponds to the latest version of the bundle directory.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object returned in case of failure.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The NSBundle object that corresponds to bundle path, or nil if the bundle does not identify an accessible bundle directory.</Abstract></ReturnValue>
+			<Anchor>//api/name/bundleWithRepoId:bundleId:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMBundle/initWithDescriptor:error:</TokenIdentifier>
+			<Abstract type="html">Returns a ADMBundle object initialized to correspond to the specified bundle path.</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDescriptor:(NSString *)descriptor error:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>descriptor</Name>
+					<Abstract type="html">The combined ids of the repository id and bundle id in the form of repo.bundle.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object returned in case of failure.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The NSBundle object that corresponds to bundle path, or nil if the bundle does not identify an accessible bundle directory.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithDescriptor:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMBundle/initWithRepoId:bundleId:error:</TokenIdentifier>
+			<Abstract type="html">Returns a ADMBundle object initialized to correspond to the specified bundle path.</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRepoId:(NSString *)repositoryId bundleId:(NSString *)bundleId error:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>repositoryId</Name>
+					<Abstract type="html">The name of the repository that points to the bundle directory&apos;s parent directory.</Abstract>
+				</Parameter><Parameter>
+					<Name>bundleId</Name>
+					<Abstract type="html">The name of the bundle that corresponds to the latest version of the bundle directory.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error object returned in case of failure.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The NSBundle object that corresponds to bundle path, or nil if the bundle does not identify an accessible bundle directory.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithRepoId:bundleId:error:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMBundle/NSBundle</TokenIdentifier>
+			<Abstract type="html">Returns the NSBundle object that corresponds to the directory where the asset content is located.</Abstract>
+			<DeclaredIn>ADMBundle.h</DeclaredIn>			
+			
+			<Declaration>- (NSBundle *)NSBundle</Declaration>
+			
+			<ReturnValue><Abstract type="html">The NSBundle object that corresponds to the directory where the asset content is located, or nil if a bundle object could not be created.</Abstract></ReturnValue>
+			<Anchor>//api/name/NSBundle</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

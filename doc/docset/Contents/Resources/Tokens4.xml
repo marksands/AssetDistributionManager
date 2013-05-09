@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ADMRepo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ADMRepo</TokenIdentifier>
+			<Abstract type="html">Arhive tarballs using the command line tar -cvf file.tar.gz file/</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/initWithSourceURL:repoId:</TokenIdentifier>
+			<Abstract type="html">TODO: write something</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSourceURL:(NSURL *)url repoId:(NSString *)repositoryId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>url</Name>
+					<Abstract type="html">&lt;discussion&gt;</Abstract>
+				</Parameter><Parameter>
+					<Name>repositoryId</Name>
+					<Abstract type="html">&lt;discussion&gt;</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">object or nil</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithSourceURL:repoId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/update</TokenIdentifier>
+			<Abstract type="html">TODO: write something</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>- (void)update</Declaration>
+			
+			
+			<Anchor>//api/name/update</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/manifestDictionary</TokenIdentifier>
+			<Abstract type="html">TODO: write something</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>- (NSDictionary *)manifestDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/manifestDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/bundleIds</TokenIdentifier>
+			<Abstract type="html">TODO: write something</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)bundleIds</Declaration>
+			
+			
+			<Anchor>//api/name/bundleIds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The receiver&apos;s delegate.</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (weak, nonatomic) id&lt;ADMRepoDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/delegate</TokenIdentifier>
+			<Abstract type="html">The receiver&apos;s delegate.</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (weak, nonatomic) id&lt;ADMRepoDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setRepositoryId:</TokenIdentifier>
+			<Abstract type="html">The name of the repository parent directory for all encompassing bundles.</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) NSString *repositoryId</Declaration>
+			
+			
+			<Anchor>//api/name/repositoryId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/repositoryId</TokenIdentifier>
+			<Abstract type="html">The name of the repository parent directory for all encompassing bundles.</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) NSString *repositoryId</Declaration>
+			
+			
+			<Anchor>//api/name/repositoryId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setSourceURL:</TokenIdentifier>
+			<Abstract type="html">source URL</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) NSURL *sourceURL</Declaration>
+			
+			
+			<Anchor>//api/name/sourceURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/sourceURL</TokenIdentifier>
+			<Abstract type="html">source URL</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) NSURL *sourceURL</Declaration>
+			
+			
+			<Anchor>//api/name/sourceURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setCdnURL:</TokenIdentifier>
+			<Abstract type="html">CDN URL</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) NSURL *cdnURL</Declaration>
+			
+			
+			<Anchor>//api/name/cdnURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/cdnURL</TokenIdentifier>
+			<Abstract type="html">CDN URL</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) NSURL *cdnURL</Declaration>
+			
+			
+			<Anchor>//api/name/cdnURL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setOperationQueue:</TokenIdentifier>
+			<Abstract type="html">The operation queue which manages operations enqueued by the HTTP client.</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) NSOperationQueue *operationQueue</Declaration>
+			
+			
+			<Anchor>//api/name/operationQueue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/operationQueue</TokenIdentifier>
+			<Abstract type="html">The operation queue which manages operations enqueued by the HTTP client.</Abstract>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) NSOperationQueue *operationQueue</Declaration>
+			
+			
+			<Anchor>//api/name/operationQueue</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/mark/Library/Developer/Shared/Documentation/DocSets/com.asset.distributor.Asset-Distribution-Manager.docset
+Time: 2013-05-09 23:42:37 +0000

@@ -1,0 +1,954 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ADMDownloadOperation Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Asset Distribution Manager </a></h1>
+				<a id="developerHome" href="../index.html">Mark Sands</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ADMDownloadOperation Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/outputStream">&nbsp;&nbsp;&nbsp;&nbsp;outputStream</option>
+	
+	<option value="//api/name/path">&nbsp;&nbsp;&nbsp;&nbsp;path</option>
+	
+	<option value="//api/name/request">&nbsp;&nbsp;&nbsp;&nbsp;request</option>
+	
+	<option value="//api/name/response">&nbsp;&nbsp;&nbsp;&nbsp;response</option>
+	
+	<option value="//api/name/runLoopModes">&nbsp;&nbsp;&nbsp;&nbsp;runLoopModes</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithRequest:downloadPath:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithRequest:downloadPath:</option>
+	
+	<option value="//api/name/isPaused">&nbsp;&nbsp;&nbsp;&nbsp;- isPaused</option>
+	
+	<option value="//api/name/pause">&nbsp;&nbsp;&nbsp;&nbsp;- pause</option>
+	
+	<option value="//api/name/resume">&nbsp;&nbsp;&nbsp;&nbsp;- resume</option>
+	
+	<option value="//api/name/setDownloadProgressBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- setDownloadProgressBlock:</option>
+	
+	<option value="//api/name/setShouldExecuteAsBackgroundTaskWithExpirationHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- setShouldExecuteAsBackgroundTaskWithExpirationHandler:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Run Loop Modes">Accessing Run Loop Modes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting URL Connection Information">Getting URL Connection Information</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting Response Data">Getting Response Data</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Streams">Accessing Streams</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initializing a ADMDownloadOperation Object">Initializing a ADMDownloadOperation Object</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Pausing / Resuming Requests">Pausing / Resuming Requests</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Configuring Backgrounding Task Behavior">Configuring Backgrounding Task Behavior</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting Progress Callbacks">Setting Progress Callbacks</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/outputStream">outputStream</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/path">path</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/request">request</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/response">response</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/runLoopModes">runLoopModes</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithRequest:downloadPath:">initWithRequest:downloadPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isPaused">isPaused</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pause">pause</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resume">resume</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDownloadProgressBlock:">setDownloadProgressBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setShouldExecuteAsBackgroundTaskWithExpirationHandler:">setShouldExecuteAsBackgroundTaskWithExpirationHandler:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ADMDownloadOperation Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ADMDownloadOperation Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSOperation</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSURLConnectionDataDelegate<br />NSURLConnectionDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ADMDownloadOperation.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Accessing Run Loop Modes" name="task_Accessing Run Loop Modes"></a>
+						<h3 class="subsubtitle task-title">Accessing Run Loop Modes</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/runLoopModes">&nbsp;&nbsp;runLoopModes</a></code>
+		<span class="tooltip"><p>The run loop modes in which the operation will run on the network thread. By default, this is a single-member set containing <code>NSRunLoopCommonModes</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Getting URL Connection Information" name="task_Getting URL Connection Information"></a>
+						<h3 class="subsubtitle task-title">Getting URL Connection Information</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/request">&nbsp;&nbsp;request</a></code>
+		<span class="tooltip"><p>The request used by the operation&rsquo;s connection.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/response">&nbsp;&nbsp;response</a></code>
+		<span class="tooltip"><p>The last response received by the operation&rsquo;s connection.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Getting Response Data" name="task_Getting Response Data"></a>
+						<h3 class="subsubtitle task-title">Getting Response Data</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
+		<span class="tooltip"><p>The file path where the data received during the request is saved.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Streams" name="task_Accessing Streams"></a>
+						<h3 class="subsubtitle task-title">Accessing Streams</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/outputStream">&nbsp;&nbsp;outputStream</a></code>
+		<span class="tooltip"><p>The output stream that is used to write data received until the request is finished.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initializing a ADMDownloadOperation Object" name="task_Initializing a ADMDownloadOperation Object"></a>
+						<h3 class="subsubtitle task-title">Initializing a ADMDownloadOperation Object</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithRequest:downloadPath:">&ndash;&nbsp;initWithRequest:downloadPath:</a></code>
+		<span class="tooltip"><p>Initializes and returns a newly allocated operation object with a url connection configured with the specified url request.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Pausing / Resuming Requests" name="task_Pausing / Resuming Requests"></a>
+						<h3 class="subsubtitle task-title">Pausing / Resuming Requests</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pause">&ndash;&nbsp;pause</a></code>
+		<span class="tooltip"><p>Pauses the execution of the request operation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isPaused">&ndash;&nbsp;isPaused</a></code>
+		<span class="tooltip"><p>Whether the request operation is currently paused.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resume">&ndash;&nbsp;resume</a></code>
+		<span class="tooltip"><p>Resumes the execution of the paused request operation.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Configuring Backgrounding Task Behavior" name="task_Configuring Backgrounding Task Behavior"></a>
+						<h3 class="subsubtitle task-title">Configuring Backgrounding Task Behavior</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setShouldExecuteAsBackgroundTaskWithExpirationHandler:">&ndash;&nbsp;setShouldExecuteAsBackgroundTaskWithExpirationHandler:</a></code>
+		<span class="tooltip"><p>Specifies that the operation should continue execution after the app has entered the background, and the expiration handler for that background task.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Setting Progress Callbacks" name="task_Setting Progress Callbacks"></a>
+						<h3 class="subsubtitle task-title">Setting Progress Callbacks</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDownloadProgressBlock:">&ndash;&nbsp;setDownloadProgressBlock:</a></code>
+		<span class="tooltip"><p>Sets a callback to be called when an undetermined number of bytes have been downloaded from the server.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/outputStream" title="outputStream"></a>
+	<h3 class="subsubtitle method-title">outputStream</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The output stream that is used to write data received until the request is finished.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSOutputStream *outputStream</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The output stream that is used to write data received until the request is finished.</p>
+
+<p>@discussion By default, data is accumulated into a buffer that is stored into <code>responseData</code> upon completion of the request. When <code>outputStream</code> is set, the data will not be accumulated into an internal buffer, and as a result, the <code>responseData</code> property of the completed request will be <code>nil</code>. The output stream will be scheduled in the network thread runloop upon being set.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/path" title="path"></a>
+	<h3 class="subsubtitle method-title">path</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The file path where the data received during the request is saved.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, strong) NSString *path</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The file path where the data received during the request is saved.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/request" title="request"></a>
+	<h3 class="subsubtitle method-title">request</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The request used by the operation&rsquo;s connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, strong) NSURLRequest *request</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The request used by the operation&rsquo;s connection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/response" title="response"></a>
+	<h3 class="subsubtitle method-title">response</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The last response received by the operation&rsquo;s connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, strong) NSURLResponse *response</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The last response received by the operation&rsquo;s connection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/runLoopModes" title="runLoopModes"></a>
+	<h3 class="subsubtitle method-title">runLoopModes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The run loop modes in which the operation will run on the network thread. By default, this is a single-member set containing <code>NSRunLoopCommonModes</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSSet *runLoopModes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The run loop modes in which the operation will run on the network thread. By default, this is a single-member set containing <code>NSRunLoopCommonModes</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithRequest:downloadPath:" title="initWithRequest:downloadPath:"></a>
+	<h3 class="subsubtitle method-title">initWithRequest:downloadPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes and returns a newly allocated operation object with a url connection configured with the specified url request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithRequest:(NSURLRequest *)<em>urlRequest</em> downloadPath:(NSString *)<em>path</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlRequest</em></dt>
+			<dd><p>The request object to be used by the operation connection.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The download path where the recieved data object will be saved.</p>
+
+<p>@discussion This is the designated initializer.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes and returns a newly allocated operation object with a url connection configured with the specified url request.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isPaused" title="isPaused"></a>
+	<h3 class="subsubtitle method-title">isPaused</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether the request operation is currently paused.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isPaused</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the operation is currently paused, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether the request operation is currently paused.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pause" title="pause"></a>
+	<h3 class="subsubtitle method-title">pause</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Pauses the execution of the request operation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pause</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Pauses the execution of the request operation.</p>
+
+<p>@discussion A paused operation returns <code>NO</code> for <code>-isReady</code>, <code>-isExecuting</code>, and <code>-isFinished</code>. As such, it will remain in an <code>NSOperationQueue</code> until it is either cancelled or resumed. Pausing a finished, cancelled, or paused operation has no effect.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resume" title="resume"></a>
+	<h3 class="subsubtitle method-title">resume</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resumes the execution of the paused request operation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resume</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Resumes the execution of the paused request operation.</p>
+
+<p>@discussion Pause/Resume behavior varies depending on the underlying implementation for the operation class. In its base implementation, resuming a paused requests restarts the original request. However, since HTTP defines a specification for how to request a specific content range, <code>ADMDownloadOperation</code> will resume downloading the request from where it left off, instead of restarting the original request.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDownloadProgressBlock:" title="setDownloadProgressBlock:"></a>
+	<h3 class="subsubtitle method-title">setDownloadProgressBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a callback to be called when an undetermined number of bytes have been downloaded from the server.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDownloadProgressBlock:(void ( ^ ) ( float percentage ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block object to be called when an undetermined number of bytes have been downloaded from the server. This block has no return value and takes one argument: the percentage of the total bytes read during the request, as initially determined by the expected content size of the <code>NSHTTPURLResponse</code> object. This block may be called multiple times, and will execute on the main thread.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets a callback to be called when an undetermined number of bytes have been downloaded from the server.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setShouldExecuteAsBackgroundTaskWithExpirationHandler:" title="setShouldExecuteAsBackgroundTaskWithExpirationHandler:"></a>
+	<h3 class="subsubtitle method-title">setShouldExecuteAsBackgroundTaskWithExpirationHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies that the operation should continue execution after the app has entered the background, and the expiration handler for that background task.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setShouldExecuteAsBackgroundTaskWithExpirationHandler:(void ( ^ ) ( void ))<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A handler to be called shortly before the application’s remaining background time reaches 0. The handler is wrapped in a block that cancels the operation, and cleans up and marks the end of execution, unlike the <code>handler</code> parameter in <code>UIApplication -beginBackgroundTaskWithExpirationHandler:</code>, which expects this to be done in the handler itself. The handler is called synchronously on the main thread, thus blocking the application’s suspension momentarily while the application is notified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies that the operation should continue execution after the app has entered the background, and the expiration handler for that background task.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ADMDownloadOperation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Mark Sands. All rights reserved. (Last updated: 2013-05-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "cats": {
+            "version": 1
+        },
+        "dogs": {
+            "version": 2
+        }
+    }
+}

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ADMDownloadOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ADMDownloadOperation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setRunLoopModes:</TokenIdentifier>
+			<Abstract type="html">The run loop modes in which the operation will run on the network thread. By default, this is a single-member set containing NSRunLoopCommonModes.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSSet *runLoopModes</Declaration>
+			
+			
+			<Anchor>//api/name/runLoopModes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMDownloadOperation/runLoopModes</TokenIdentifier>
+			<Abstract type="html">The run loop modes in which the operation will run on the network thread. By default, this is a single-member set containing NSRunLoopCommonModes.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSSet *runLoopModes</Declaration>
+			
+			
+			<Anchor>//api/name/runLoopModes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setRequest:</TokenIdentifier>
+			<Abstract type="html">The request used by the operation&apos;s connection.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, strong) NSURLRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMDownloadOperation/request</TokenIdentifier>
+			<Abstract type="html">The request used by the operation&apos;s connection.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, strong) NSURLRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setResponse:</TokenIdentifier>
+			<Abstract type="html">The last response received by the operation&apos;s connection.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, strong) NSURLResponse *response</Declaration>
+			
+			
+			<Anchor>//api/name/response</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMDownloadOperation/response</TokenIdentifier>
+			<Abstract type="html">The last response received by the operation&apos;s connection.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, strong) NSURLResponse *response</Declaration>
+			
+			
+			<Anchor>//api/name/response</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setPath:</TokenIdentifier>
+			<Abstract type="html">The file path where the data received during the request is saved.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, strong) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMDownloadOperation/path</TokenIdentifier>
+			<Abstract type="html">The file path where the data received during the request is saved.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic, strong) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setOutputStream:</TokenIdentifier>
+			<Abstract type="html">The output stream that is used to write data received until the request is finished.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSOutputStream *outputStream</Declaration>
+			
+			
+			<Anchor>//api/name/outputStream</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMDownloadOperation/outputStream</TokenIdentifier>
+			<Abstract type="html">The output stream that is used to write data received until the request is finished.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSOutputStream *outputStream</Declaration>
+			
+			
+			<Anchor>//api/name/outputStream</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/initWithRequest:downloadPath:</TokenIdentifier>
+			<Abstract type="html">Initializes and returns a newly allocated operation object with a url connection configured with the specified url request.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRequest:(NSURLRequest *)urlRequest downloadPath:(NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>urlRequest</Name>
+					<Abstract type="html">The request object to be used by the operation connection.</Abstract>
+				</Parameter><Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The download path where the recieved data object will be saved.
+
+@discussion This is the designated initializer.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithRequest:downloadPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/pause</TokenIdentifier>
+			<Abstract type="html">Pauses the execution of the request operation.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>- (void)pause</Declaration>
+			
+			
+			<Anchor>//api/name/pause</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/isPaused</TokenIdentifier>
+			<Abstract type="html">Whether the request operation is currently paused.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isPaused</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the operation is currently paused, otherwise NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isPaused</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/resume</TokenIdentifier>
+			<Abstract type="html">Resumes the execution of the paused request operation.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>- (void)resume</Declaration>
+			
+			
+			<Anchor>//api/name/resume</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setShouldExecuteAsBackgroundTaskWithExpirationHandler:</TokenIdentifier>
+			<Abstract type="html">Specifies that the operation should continue execution after the app has entered the background, and the expiration handler for that background task.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>- (void)setShouldExecuteAsBackgroundTaskWithExpirationHandler:(void ( ^ ) ( void ))handler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>handler</Name>
+					<Abstract type="html">A handler to be called shortly before the application’s remaining background time reaches 0. The handler is wrapped in a block that cancels the operation, and cleans up and marks the end of execution, unlike the handler parameter in UIApplication -beginBackgroundTaskWithExpirationHandler:, which expects this to be done in the handler itself. The handler is called synchronously on the main thread, thus blocking the application’s suspension momentarily while the application is notified.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setShouldExecuteAsBackgroundTaskWithExpirationHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMDownloadOperation/setDownloadProgressBlock:</TokenIdentifier>
+			<Abstract type="html">Sets a callback to be called when an undetermined number of bytes have been downloaded from the server.</Abstract>
+			<DeclaredIn>ADMDownloadOperation.h</DeclaredIn>			
+			
+			<Declaration>- (void)setDownloadProgressBlock:(void ( ^ ) ( float percentage ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block object to be called when an undetermined number of bytes have been downloaded from the server. This block has no return value and takes one argument: the percentage of the total bytes read during the request, as initially determined by the expected content size of the NSHTTPURLResponse object. This block may be called multiple times, and will execute on the main thread.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDownloadProgressBlock:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ADMUntarOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ADMUntarOperation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ADMUntarOperation.h</DeclaredIn>
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMUntarOperation/initWithPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ADMUntarOperation.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPath:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/initWithPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ADMUntarOperation/setPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ADMUntarOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ADMUntarOperation/path</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ADMUntarOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
+    <id>http://todo/core/feed/docset.atom/20130509164239</id>
+    <title type="text">Asset Distribution Manager Documentation</title>
+    <rights>Copyright © 2013 Mark Sands. All rights reserved.</rights>
+    <link rel="self" href="http://todo/core/feed/docset.atom"></link>
+    <docset:publisherName>Mark Sands</docset:publisherName>
+    <docset:publisherID>com.asset.distributor.documentation</docset:publisherID>
+    <updated>2013-05-09T16:42:39-07:00</updated>
+    <entry>
+        <id>tag:todo,2013-05-09:org.adm.docset/1.0.0</id>
+        <title type="text">Asset Distribution Manager</title>
+        <updated>2013-05-09T16:42:39-07:00</updated>
+        <content type="text">Asset Distribution Manager (v1.0.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http://todo/core/feed/com.asset.distributor.Asset-Distribution-Manager-1.0.xar" length="73855"></link>
+        <docset:identifier>org.adm.docset</docset:identifier>
+        <docset:version>1.0.0</docset:version>
+        <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>
+    </entry>
+</feed>
