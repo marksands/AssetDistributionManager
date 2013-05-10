@@ -2,6 +2,8 @@
 
 _A lightweight solution to manage OTA asset distribution to live iOS apps._
 
+**_This project is currently in active development and should not be used in production_**
+
 ### The problem
 
 iOS apps must have an app size below 50MB to be downloaded OTA from a cellular network. This results in losing a lot of potential users by not being able to download the app if they're not connected to a WiFi network.
@@ -17,8 +19,8 @@ This project was built with specific goals in mind:
 * Very lightweight!
 * Zero dependencies!
 * NO singletons! Create as many ADMRepos as you like!
-* Delegate driven! NO blocks to minimize retain cylce risk!
-* Thorough documentation with Appledoc for Xcode integration!
+* Delegate driven!
+* Excellent Documentation!
 * Unit Tested!
 
 ## Example
@@ -90,7 +92,6 @@ The bundles' dictionary keys correspond to each existing bundle name, and their 
 
 ## TODO
 
-* This project is currently in active development and should not be used in production
 * Test every possible scenario
 * Write more tests
 * Write more documentation
