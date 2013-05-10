@@ -36,7 +36,7 @@
     NSLog(@"Finished cloning bundles!");
     
     NSError *error = nil;
-    NSBundle *catsBundle = [ADMBundle bundleWithDescriptor:@"com.acd.master.cats" error:&error];
+    NSBundle *catsBundle = [ADMBundle bundleWithDescriptor:@"com.adm.master.cats" error:&error];
     
     if (error) {
         [[[UIAlertView alloc] initWithTitle:error.localizedFailureReason
