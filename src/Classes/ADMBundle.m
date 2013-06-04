@@ -42,10 +42,15 @@
     _bundleId = bundleId;
     self.bundle = [NSBundle bundleWithURL:[NSURL fileURLWithPath:bundlePath]];
     
-    if (self.bundle == nil) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:bundlePath
-                                                             forKey:NSFilePathErrorKey];
-        *error = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadNoSuchFileError userInfo:userInfo];
+    if (self.bundle == nil)
+    {
+        if (error != NULL)
+        {
+            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:bundlePath
+                                                                 forKey:NSFilePathErrorKey];
+            *error = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadNoSuchFileError userInfo:userInfo];
+        }
+        
         return nil;
     }
     
