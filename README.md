@@ -23,6 +23,10 @@ This project was built with specific goals in mind:
 * Excellent Documentation!
 * Unit Tested!
 
+## Documentation
+
+View the [documentation!](http://marksands.github.io/AssetDistributionManager/documentation/index.html)
+
 ## Example
 
 ```objc
