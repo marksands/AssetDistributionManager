@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Assetdistributionmanager : A solution to manage and download assets to your live iOS app." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Assetdistributionmanager</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/marksands/AssetDistributionManager">View on GitHub</a>
+
+          <h1 id="project_title">Assetdistributionmanager</h1>
+          <h2 id="project_tagline">A solution to manage and download assets to your live iOS app.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/marksands/AssetDistributionManager/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/marksands/AssetDistributionManager/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="asset-distribution-manager" class="anchor" href="#asset-distribution-manager"><span class="octicon octicon-link"></span></a>Asset Distribution Manager</h1>
+
+<p><em>A lightweight solution to manage OTA asset distribution to live iOS apps.</em></p>
+
+<p><strong><em>This project is currently in active development and should not be used in production</em></strong></p>
+
+<h3>
+<a name="the-problem" class="anchor" href="#the-problem"><span class="octicon octicon-link"></span></a>The problem</h3>
+
+<p>iOS apps must have an app size below 50MB to be downloaded OTA from a cellular network. This results in losing a lot of potential users by not being able to download the app if they're not connected to a WiFi network.</p>
+
+<h3>
+<a name="the-solution" class="anchor" href="#the-solution"><span class="octicon octicon-link"></span></a>The solution</h3>
+
+<p>Do what it takes to ship the app with under 50MB of content (remove art, sound, etc.) and let ADM download those for you.</p>
+
+<h2>
+<a name="goals" class="anchor" href="#goals"><span class="octicon octicon-link"></span></a>Goals</h2>
+
+<p>This project was built with specific goals in mind:</p>
+
+<ul>
+<li>Very lightweight!</li>
+<li>Zero dependencies!</li>
+<li>NO singletons! Create as many ADMRepos as you like!</li>
+<li>Delegate driven!</li>
+<li>Excellent Documentation!</li>
+<li>Unit Tested!</li>
+</ul><h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<div class="highlight"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+
+    <span class="n">NSURL</span> <span class="o">*</span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="s">@"http://s3.amazonaws.com/my-bucket/"</span><span class="p">];</span>
+
+    <span class="n">self</span><span class="p">.</span><span class="n">repo</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ADMRepo</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithSourceURL</span><span class="o">:</span><span class="n">url</span> <span class="n">repoId</span><span class="o">:</span><span class="s">@"com.adm.level1"</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">repo</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">repo</span> <span class="n">update</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">repo:</span><span class="p">(</span><span class="n">ADMRepo</span> <span class="o">*</span><span class="p">)</span><span class="nv">repo</span> <span class="nf">downloadProgress:</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="nv">progress</span>
+<span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%.2f%% downloaded"</span><span class="p">,</span> <span class="n">progress</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didFinishUpdatingRepo:</span><span class="p">(</span><span class="n">ADMRepo</span> <span class="o">*</span><span class="p">)</span><span class="nv">repo</span>
+<span class="p">{</span>
+    <span class="n">NSBundle</span> <span class="o">*</span><span class="n">dogsBundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">ADMBundle</span> <span class="n">bundleWithDescriptor</span><span class="o">:</span><span class="s">@"com.adm.level1.dogs"</span><span class="p">];</span>
+    <span class="n">NSBundle</span> <span class="o">*</span><span class="n">catsBundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">ADMBundle</span> <span class="n">bundleWithDescriptor</span><span class="o">:</span><span class="s">@"com.adm.level1.cats"</span><span class="p">];</span>
+
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">dog</span> <span class="o">=</span> <span class="p">[</span><span class="n">dogsBundle</span> <span class="n">pathForResource</span><span class="o">:</span><span class="s">@"dog1"</span> <span class="n">ofType</span><span class="o">:</span><span class="s">@"png"</span><span class="p">];</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">cat</span> <span class="o">=</span> <span class="p">[</span><span class="n">catsBundle</span> <span class="n">pathForResource</span><span class="o">:</span><span class="s">@"cat1"</span> <span class="n">ofType</span><span class="o">:</span><span class="s">@"png"</span><span class="p">];</span>
+
+    <span class="n">self</span><span class="p">.</span><span class="n">dogImageView</span><span class="p">.</span><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIImage</span> <span class="n">imageWithContentsOfFile</span><span class="o">:</span><span class="n">dog</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">catImageView</span><span class="p">.</span><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIImage</span> <span class="n">imageWithContentsOfFile</span><span class="o">:</span><span class="n">cat</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="server-format" class="anchor" href="#server-format"><span class="octicon octicon-link"></span></a>Server format</h2>
+
+<h3>
+<a name="repo" class="anchor" href="#repo"><span class="octicon octicon-link"></span></a>Repo</h3>
+
+<p>ADM treats server assets as repositories. A repository is a directory with a unique name that houses any number of bundles and an <code>index.json</code> file which lists the contents of the repo.</p>
+
+<h3>
+<a name="bundle" class="anchor" href="#bundle"><span class="octicon octicon-link"></span></a>Bundle</h3>
+
+<p>A bundle is simply a tarball of a directory of assets that's named with a version identifier. For example, <code>cats-1.tar.gz</code> is a bundle that will become <code>cats-2.tar.gz</code> when new assets are added to that bundle.</p>
+
+<h3>
+<a name="indexjson" class="anchor" href="#indexjson"><span class="octicon octicon-link"></span></a>index.json</h3>
+
+<p>The <code>index.json</code> file lists the contents of the bundles and their versions. It looks like this:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">"bundles"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"art"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"version"</span><span class="p">:</span> <span class="mi">4</span>
+        <span class="p">},</span>
+        <span class="nt">"sound"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"version"</span><span class="p">:</span> <span class="mi">7</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>The bundles' dictionary keys correspond to each existing bundle name, and their version is listed as a dictionary of the bundle. This format is not subject to change. It looks more complex than necessary simply for future proofing. Currently there are no plans to create a tool to automatically build and eploy ADM repositories.</p>
+
+<h2>
+<a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<ul>
+<li>This project is heavily inspired by <a href="https://github.com/mindsnacks/Zinc-objc">Zinc</a>. If you need a more feature-complete solution, please check that out!</li>
+<li>ADM's concurrent download operation is heavily influenced from <a href="https://github.com/afnetworking/afnetworking">AFNetworking</a>'s AFURLConnectionOperation.</li>
+<li>In order to avoid dependencies, I borrowed and modified a large portion of <a href="https://github.com/mhausherr/Light-Untar-for-iOS">Light-Untar-for-iOS</a>.</li>
+</ul><h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>Test every possible scenario</li>
+<li>Write more tests</li>
+<li>Write more documentation</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Assetdistributionmanager maintained by <a href="https://github.com/marksands">marksands</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
