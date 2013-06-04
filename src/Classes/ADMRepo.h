@@ -26,12 +26,14 @@
 ///-------------------
 
 /**
- TODO: write something
-
- @param url <discussion>
- @param repositoryId <discussion>
+ Initializes an `ADMRepo` object with the specified source URL and repository ID.
  
- @return object or nil
+ This is the designated initializer.
+
+ @param url The remote source URL to download the manifest and asset tarballs. This argument must not be `nil`.
+ @param repositoryId The name of the remote repository. This argument must not be `nil`.
+ 
+ @return The newly-initialized ADMClient or nil
 */
 - (id)initWithSourceURL:(NSURL *)url repoId:(NSString *)repositoryId;
 
@@ -40,7 +42,9 @@
 ///-----------------------------
 
 /**
- TODO: write something
+ Attempts to update the local repository in the iOS device to match the remote server configuration.
+ 
+ It first checks the remote server manifest and checks for discrepencies among the local repository configuration if it exists. It then downloads only the necessary remote tarballs and extracts the archive in the Documents directory for bundle access.
  */
 - (void)update;
 
@@ -49,12 +53,16 @@
 /// -----------------------------
 
 /**
- TODO: write something
+ Returns the index.json manifest file in dictionary format.
+ 
+ @return The dictionary represetnation of the index.json manifest file
  */
 - (NSDictionary *)manifestDictionary;
 
 /**
- TODO: write something
+ Returns the list of the bundle IDs from the manifest.
+ 
+ @return An array of bundle IDs
  */
 - (NSArray *)bundleIds;
 
@@ -79,12 +87,12 @@
 @property (strong, nonatomic) NSString *repositoryId;
 
 /**
- source URL
+ The remote source URL used to download the manifest files and tarballs if the cdnURL is not set.
  */
 @property (strong, nonatomic) NSURL *sourceURL;
 
 /**
- CDN URL
+ An optional CDN URL can be set to download the tarballs using this remote server address instead of the sourceURL. This is useful to separate the index.json manifest cache from the tarball caches when using a CDN.
  */
 @property (strong, nonatomic) NSURL *cdnURL;
 
