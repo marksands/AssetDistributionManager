@@ -18,6 +18,12 @@
 
 /**
  Arhive tarballs using the command line `tar -cvf file.tar.gz file/`
+ 
+ `ADMRepo` allows the user to synchronously or asynchronously download versioned assets over the air. It uses the repository ID to form a manifest that holds the repository's makeup and it downloads the file specified by the source URL.
+
+ ## Automatic Content Loading
+ 
+ The user can create as many instances of `ADMRepo` as they prefer while specifying unique repository IDs. The user can choose whether or not to wait on the assets to download or let them operate on a background thread. 
  */
 @interface ADMRepo : NSObject
 

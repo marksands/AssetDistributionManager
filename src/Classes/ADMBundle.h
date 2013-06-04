@@ -10,8 +10,7 @@
 
 @class ADMRepo;
 
-/** ------------------------------------------------------------------------------------------------
- 
+/**
  The ADMBundle class is a proxy class that treats content directories as NSBundles.
  
  An NSBundle object represents a location in the file system that groups code and resources that can be used in a program. Many of the methods you use to load resources from a bundle automatically locate the appropriate starting directory and look for resources in known places.
