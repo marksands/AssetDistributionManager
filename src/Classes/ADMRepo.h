@@ -17,9 +17,9 @@
 @end
 
 /**
- Arhive tarballs using the command line `tar -cvf file.tar.gz file/`
- 
  `ADMRepo` allows the user to synchronously or asynchronously download versioned assets over the air. It uses the repository ID to form a manifest that holds the repository's makeup and it downloads the file specified by the source URL.
+ 
+ Versioned assets are gzipped tarballs that have a version suffix to their name that corresponds to the current version found in the manifest JSON file. The remote server is responsible for properly configuring the manifest file and delivering the latest manifest file that corresponds to the existing tarballs in the remote asset repository. The tarballs can be archived using tar's CLI `tar -cvf files-1.tar.gz files/`.
 
  ## Automatic Content Loading
  

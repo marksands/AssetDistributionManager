@@ -21,7 +21,7 @@ appledoc \
   --docset-package-url "http://todo/core/feed/%DOCSETPACKAGEFILENAME" \
   --publish-docset \
   --output . \
-  ../src/Classes
+  ../src/Classes/ADM*
 
 echo
 echo "Finished."

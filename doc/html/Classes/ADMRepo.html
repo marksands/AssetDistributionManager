@@ -162,7 +162,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Arhive tarballs using the command line <code>tar -cvf file.tar.gz file/</code></p>
+						<p><code>ADMRepo</code> allows the user to synchronously or asynchronously download versioned assets over the air. It uses the repository ID to form a manifest that holds the repository&rsquo;s makeup and it downloads the file specified by the source URL.</p>
+
+<p>Versioned assets are gzipped tarballs that have a version suffix to their name that corresponds to the current version found in the manifest JSON file. The remote server is responsible for properly configuring the manifest file and delivering the latest manifest file that corresponds to the existing tarballs in the remote asset repository. The tarballs can be archived using tar&rsquo;s CLI <code>tar -cvf files-1.tar.gz files/</code>.</p>
+
+<h2>Automatic Content Loading</h2>
+
+<p>The user can create as many instances of <code>ADMRepo</code> as they prefer while specifying unique repository IDs. The user can choose whether or not to wait on the assets to download or let them operate on a background thread.</p>
 					</div>
 					
 					
@@ -181,7 +187,7 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithSourceURL:repoId:">&ndash;&nbsp;initWithSourceURL:repoId:</a></code>
-		<span class="tooltip"><p>TODO: write something</p></span>
+		<span class="tooltip"><p>Initializes an <code>ADMRepo</code> object with the specified source URL and repository ID.</p></span>
 	</span>
 	
 	
@@ -196,7 +202,7 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/update">&ndash;&nbsp;update</a></code>
-		<span class="tooltip"><p>TODO: write something</p></span>
+		<span class="tooltip"><p>Attempts to update the local repository in the iOS device to match the remote server configuration.</p></span>
 	</span>
 	
 	
@@ -211,14 +217,14 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/manifestDictionary">&ndash;&nbsp;manifestDictionary</a></code>
-		<span class="tooltip"><p>TODO: write something</p></span>
+		<span class="tooltip"><p>Returns the index.json manifest file in dictionary format.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/bundleIds">&ndash;&nbsp;bundleIds</a></code>
-		<span class="tooltip"><p>TODO: write something</p></span>
+		<span class="tooltip"><p>Returns the list of the bundle IDs from the manifest.</p></span>
 	</span>
 	
 	
@@ -255,14 +261,14 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sourceURL">&nbsp;&nbsp;sourceURL</a></code>
-		<span class="tooltip"><p>source URL</p></span>
+		<span class="tooltip"><p>The remote source URL used to download the manifest files and tarballs if the cdnURL is not set.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cdnURL">&nbsp;&nbsp;cdnURL</a></code>
-		<span class="tooltip"><p>CDN URL</p></span>
+		<span class="tooltip"><p>An optional CDN URL can be set to download the tarballs using this remote server address instead of the sourceURL. This is useful to separate the index.json manifest cache from the tarball caches when using a CDN.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -293,7 +299,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>CDN URL</p>
+		<p>An optional CDN URL can be set to download the tarballs using this remote server address instead of the sourceURL. This is useful to separate the index.json manifest cache from the tarball caches when using a CDN.</p>
 	</div>		
 	
     
@@ -310,7 +316,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>CDN URL</p>
+		<p>An optional CDN URL can be set to download the tarballs using this remote server address instead of the sourceURL. This is useful to separate the index.json manifest cache from the tarball caches when using a CDN.</p>
 	</div>
 	
 	
@@ -459,7 +465,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>source URL</p>
+		<p>The remote source URL used to download the manifest files and tarballs if the cdnURL is not set.</p>
 	</div>		
 	
     
@@ -476,7 +482,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>source URL</p>
+		<p>The remote source URL used to download the manifest files and tarballs if the cdnURL is not set.</p>
 	</div>
 	
 	
@@ -510,7 +516,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>TODO: write something</p>
+		<p>Returns the list of the bundle IDs from the manifest.</p>
 	</div>		
 	
     
@@ -521,13 +527,18 @@
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of bundle IDs</p>
+	</div>
+	
 	
 	
 	
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>TODO: write something</p>
+		<p>Returns the list of the bundle IDs from the manifest.</p>
 	</div>
 	
 	
@@ -551,7 +562,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>TODO: write something</p>
+		<p>Initializes an <code>ADMRepo</code> object with the specified source URL and repository ID.</p>
 	</div>		
 	
     
@@ -565,12 +576,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>url</em></dt>
-			<dd><p><discussion></p></dd>
+			<dd><p>The remote source URL to download the manifest and asset tarballs. This argument must not be <code>nil</code>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>repositoryId</em></dt>
-			<dd><p><discussion></p></dd>
+			<dd><p>The name of the remote repository. This argument must not be <code>nil</code>.</p></dd>
 		</dl>
 		
 	</div>
@@ -579,7 +590,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>object or nil</p>
+		<p>The newly-initialized ADMClient or nil</p>
 	</div>
 	
 	
@@ -588,7 +599,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>TODO: write something</p>
+		<p>Initializes an <code>ADMRepo</code> object with the specified source URL and repository ID.</p>
+
+<p>This is the designated initializer.</p>
 	</div>
 	
 	
@@ -612,7 +625,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>TODO: write something</p>
+		<p>Returns the index.json manifest file in dictionary format.</p>
 	</div>		
 	
     
@@ -623,13 +636,18 @@
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The dictionary represetnation of the index.json manifest file</p>
+	</div>
+	
 	
 	
 	
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>TODO: write something</p>
+		<p>Returns the index.json manifest file in dictionary format.</p>
 	</div>
 	
 	
@@ -653,7 +671,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>TODO: write something</p>
+		<p>Attempts to update the local repository in the iOS device to match the remote server configuration.</p>
 	</div>		
 	
     
@@ -670,7 +688,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>TODO: write something</p>
+		<p>Attempts to update the local repository in the iOS device to match the remote server configuration.</p>
+
+<p>It first checks the remote server manifest and checks for discrepencies among the local repository configuration if it exists. It then downloads only the necessary remote tarballs and extracts the archive in the Documents directory for bundle access.</p>
 	</div>
 	
 	
@@ -700,7 +720,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Mark Sands. All rights reserved. (Last updated: 2013-05-09)</span><br />
+						<p><span class="copyright">&copy; 2013 Mark Sands. All rights reserved. (Last updated: 2013-06-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

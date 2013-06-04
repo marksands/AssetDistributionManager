@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/ADMRepo</TokenIdentifier>
-			<Abstract type="html">Arhive tarballs using the command line tar -cvf file.tar.gz file/</Abstract>
+			<Abstract type="html">ADMRepo allows the user to synchronously or asynchronously download versioned assets over the air. It uses the repository ID to form a manifest that holds the repository&apos;s makeup and it downloads the file specified by the source URL.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>
 			
 			<NodeRef refid="4"/>
@@ -13,26 +13,26 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/initWithSourceURL:repoId:</TokenIdentifier>
-			<Abstract type="html">TODO: write something</Abstract>
+			<Abstract type="html">Initializes an ADMRepo object with the specified source URL and repository ID.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>- (id)initWithSourceURL:(NSURL *)url repoId:(NSString *)repositoryId</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>url</Name>
-					<Abstract type="html">&lt;discussion&gt;</Abstract>
+					<Abstract type="html">The remote source URL to download the manifest and asset tarballs. This argument must not be nil.</Abstract>
 				</Parameter><Parameter>
 					<Name>repositoryId</Name>
-					<Abstract type="html">&lt;discussion&gt;</Abstract>
+					<Abstract type="html">The name of the remote repository. This argument must not be nil.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">object or nil</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">The newly-initialized ADMClient or nil</Abstract></ReturnValue>
 			<Anchor>//api/name/initWithSourceURL:repoId:</Anchor>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/update</TokenIdentifier>
-			<Abstract type="html">TODO: write something</Abstract>
+			<Abstract type="html">Attempts to update the local repository in the iOS device to match the remote server configuration.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>- (void)update</Declaration>
@@ -43,23 +43,23 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/manifestDictionary</TokenIdentifier>
-			<Abstract type="html">TODO: write something</Abstract>
+			<Abstract type="html">Returns the index.json manifest file in dictionary format.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>- (NSDictionary *)manifestDictionary</Declaration>
 			
-			
+			<ReturnValue><Abstract type="html">The dictionary represetnation of the index.json manifest file</Abstract></ReturnValue>
 			<Anchor>//api/name/manifestDictionary</Anchor>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/bundleIds</TokenIdentifier>
-			<Abstract type="html">TODO: write something</Abstract>
+			<Abstract type="html">Returns the list of the bundle IDs from the manifest.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>- (NSArray *)bundleIds</Declaration>
 			
-			
+			<ReturnValue><Abstract type="html">An array of bundle IDs</Abstract></ReturnValue>
 			<Anchor>//api/name/bundleIds</Anchor>
 		</Token>
 		
@@ -109,7 +109,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setSourceURL:</TokenIdentifier>
-			<Abstract type="html">source URL</Abstract>
+			<Abstract type="html">The remote source URL used to download the manifest files and tarballs if the cdnURL is not set.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>@property (strong, nonatomic) NSURL *sourceURL</Declaration>
@@ -120,7 +120,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/sourceURL</TokenIdentifier>
-			<Abstract type="html">source URL</Abstract>
+			<Abstract type="html">The remote source URL used to download the manifest files and tarballs if the cdnURL is not set.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>@property (strong, nonatomic) NSURL *sourceURL</Declaration>
@@ -131,7 +131,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ADMRepo/setCdnURL:</TokenIdentifier>
-			<Abstract type="html">CDN URL</Abstract>
+			<Abstract type="html">An optional CDN URL can be set to download the tarballs using this remote server address instead of the sourceURL. This is useful to separate the index.json manifest cache from the tarball caches when using a CDN.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>@property (strong, nonatomic) NSURL *cdnURL</Declaration>
@@ -142,7 +142,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/ADMRepo/cdnURL</TokenIdentifier>
-			<Abstract type="html">CDN URL</Abstract>
+			<Abstract type="html">An optional CDN URL can be set to download the tarballs using this remote server address instead of the sourceURL. This is useful to separate the index.json manifest cache from the tarball caches when using a CDN.</Abstract>
 			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
 			<Declaration>@property (strong, nonatomic) NSURL *cdnURL</Declaration>

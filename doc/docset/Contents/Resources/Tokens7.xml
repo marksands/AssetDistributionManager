@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AppDelegate.html">
+	<File path="Protocols/ADMRepoDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AppDelegate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intf/ADMRepoDelegate</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>
+			<DeclaredIn>ADMRepo.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AppDelegate/setWindow:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/ADMRepoDelegate/repoDidFinishCloningAllBundles:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>			
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
-			<Declaration>@property (strong, nonatomic) UIWindow *window</Declaration>
+			<Declaration>- (void)repoDidFinishCloningAllBundles:(ADMRepo *)repo</Declaration>
 			
 			
-			<Anchor>//api/name/window</Anchor>
+			<Anchor>//api/name/repoDidFinishCloningAllBundles:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AppDelegate/window</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/ADMRepoDelegate/repo:downloadProgress:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>AppDelegate.h</DeclaredIn>			
+			<DeclaredIn>ADMRepo.h</DeclaredIn>			
 			
-			<Declaration>@property (strong, nonatomic) UIWindow *window</Declaration>
+			<Declaration>- (void)repo:(ADMRepo *)repo downloadProgress:(float)progress</Declaration>
 			
 			
-			<Anchor>//api/name/window</Anchor>
+			<Anchor>//api/name/repo:downloadProgress:</Anchor>
 		</Token>
 		
 	</File>

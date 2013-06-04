@@ -17,8 +17,6 @@
 						<NodeRef refid="4"/>
 						<NodeRef refid="5"/>
 						<NodeRef refid="6"/>
-						<NodeRef refid="7"/>
-						<NodeRef refid="8"/>
 						
 					</Subnodes>
 				</Node>
@@ -29,7 +27,7 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="9"/>
+						<NodeRef refid="7"/>
 						
 					</Subnodes>
 				</Node>
@@ -63,17 +61,9 @@
 			<Name>ADMUntarOperation</Name>
 			<Path>Classes/ADMUntarOperation.html</Path>
 		</Node>
+		
+		
 		<Node id="7">
-			<Name>AppDelegate</Name>
-			<Path>Classes/AppDelegate.html</Path>
-		</Node>
-		<Node id="8">
-			<Name>LoadingViewController</Name>
-			<Path>Classes/LoadingViewController.html</Path>
-		</Node>
-		
-		
-		<Node id="9">
 			<Name>ADMRepoDelegate</Name>
 			<Path>Protocols/ADMRepoDelegate.html</Path>
 		</Node>
